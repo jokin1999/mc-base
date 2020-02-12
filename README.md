@@ -7,10 +7,26 @@ Docker: [https://hub.docker.com/repository/docker/jokin1999/mc-base](https://hub
 ## 使用方法
 
 ```shell
+# 镜像拉取，国内推荐使用下方国内加速拉取方法
 docker pull jokin1999/mc-base
+# 运行容器
 docker run -p 25565:25565 -v [本地MC服务核心目录]:/srv/mc -it jokin1999/mc-base
-# 进入容器后
+# 进入容器后运行服务端
 java -jar [MC服务核心.jar文件] nogui
+```
+
+## 国内加速拉取方法
+
+拉取时可省略`:[镜像版本号]`
+
+### 阿里云
+
+```
+docker pull registry.cn-shanghai.aliyuncs.com/jokin1999/mc-base
+```
+或
+```
+docker pull registry.cn-shanghai.aliyuncs.com/jokin1999/mc-base:[镜像版本号]
 ```
 
 ## 服务核心
